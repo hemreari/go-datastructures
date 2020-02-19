@@ -281,7 +281,7 @@ func (q *Queue) Poll(number int64, timeout time.Duration) ([]interface{}, error)
 
 // Peek returns a the first item in the queue by value
 // without modifying the queue.
-func (q *Queue) Peek() ([]interface{}, error) {
+func (q *Queue) Peek() (interface{}, error) {
 	q.lock.Lock()
 	defer q.lock.Unlock()
 
